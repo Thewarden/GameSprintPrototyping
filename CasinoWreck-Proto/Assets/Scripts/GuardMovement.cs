@@ -11,6 +11,7 @@ public class GuardMovement : MonoBehaviour
     public int speed = 2;
     private Rigidbody2D rb;
     private Transform currentPos;
+    private Arcade Arcade;
 
     private void Start()
     {
@@ -40,4 +41,28 @@ public class GuardMovement : MonoBehaviour
             currentPos = endPoint.transform;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        try
+        {
+            if (collision.GetComponent<Arcade>().isBreaking)
+            {
+                Debug.Log("AAA");
+            }
+
+            else
+            {
+                return;
+            }
+        }
+
+        catch
+        {
+            return;
+        }
+        
+    }
+    
 }

@@ -822,6 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 1703519844}
+  isBreaking: 0
 --- !u!1 &1840535379
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +834,7 @@ GameObject:
   - component: {fileID: 1840535381}
   - component: {fileID: 1840535380}
   - component: {fileID: 1840535382}
+  - component: {fileID: 1840535383}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -892,6 +894,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!58 &1840535383
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840535379}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1 &1974702445
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974702446}
   m_Layer: 0
-  m_Name: Path
+  m_Name: Path1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
