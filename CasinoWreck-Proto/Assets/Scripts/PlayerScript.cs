@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D rb;
 
     private Vector2 direction = Vector2.right;
     public float speed = 10;
 
+    [Header("CameraFollow")]
     public GameObject cam;
-
+    [SerializeField]
+    private float _camOffset = 2f;
 
     [Header("Controls")]
     public KeyCode moveLeft = KeyCode.A;
@@ -67,7 +69,7 @@ public class Movement : MonoBehaviour
         }
         
 
-        cam.transform.position = new Vector3(transform.position.x, transform.position.y, cam.transform.position.z);
+        cam.transform.position = new Vector3(transform.position.x, transform.position.y + _camOffset, cam.transform.position.z);
     }
 
     private void FixedUpdate()
