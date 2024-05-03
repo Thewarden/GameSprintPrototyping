@@ -10,10 +10,18 @@ public class bgSpawn : MonoBehaviour
     private GameObject _player;
     private GameObject _bgImageObject;
     private float _bgZOffset = 5;
+    private PlayerScript playerScript;
+    private Transform playerTransform;
+
+    private float _spawnX;
+    private float _tileLength;
+    private float _tileOffset;
 
     void Start()
     {
-        this.transform.position = new Vector3(_player.GetComponent<PlayerScript>().cam.transform.position.x, _player.GetComponent<PlayerScript>().cam.transform.position.y, 0 + _bgZOffset);
+        playerScript = _player.GetComponent<PlayerScript>();
+        playerTransform = playerScript.transform;
+        this.transform.position = new Vector3(playerScript.cam.transform.position.x, playerScript.cam.transform.position.y, 0 + _bgZOffset);
         this.GetComponentInChildren<SpriteRenderer>().sprite = _backgroundImg;
         _bgImageObject = FindChildWithTag(this.gameObject, "BgImage");
         _bgImageObject.GetComponent<SpriteRenderer>().sprite = _backgroundImg;
@@ -21,7 +29,7 @@ public class bgSpawn : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     GameObject FindChildWithTag(GameObject parent, string tag)
