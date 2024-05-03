@@ -22,6 +22,7 @@ public class Arcade : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             indicator.SetActive(true);
+            
         }
     }
 
