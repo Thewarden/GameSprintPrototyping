@@ -1,45 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GuardMovement : MonoBehaviour
 {
-    public GameObject ahead;
-    public GameObject StartPoint;
-    public GameObject EndPoint;
-    private Vector2 direction = Vector2.right;
+
+    public GameObject startPoint;
+    public GameObject endPoint;
+    public int speed = 2;
     private Rigidbody2D rb;
-    // Start is called before the first frame update
-    void Start()
+    private Transform currentPos;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentPos = endPoint.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (ahead.transform.position == EndPoint.transform.position)
+        Vector2 point = currentPos.position - transform.position;
+        if (currentPos == endPoint.transform)
         {
-            setDirection(-direction);
+            rb.velocity = new Vector2(speed, 0);
         }
-        else if (ahead.transform.position == StartPoint.transform.position) //Change this to trigger and add collider2D to startPoint and endPoint.
+        else
         {
-            setDirection(-direction);
+            rb.velocity = new Vector2(-speed, 0);
         }
-    }
 
-    void setDirection(Vector2 dir)
-    {
-        direction = dir;
-    }
+        if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == endPoint.transform)
+        {
+            currentPos = startPoint.transform;
+        }
 
-    private void FixedUpdate()
-    {
-        
-
-        rb.MovePosition(ahead.transform.position);
-        ahead.transform.position += Vector3.right * 0.1f;
-
-        
+        if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == startPoint.transform)
+        {
+            currentPos = endPoint.transform;
+        }
     }
 }
