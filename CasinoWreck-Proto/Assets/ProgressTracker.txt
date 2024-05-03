@@ -1,0 +1,9 @@
+Player Movements
+Guard Movement and Detection
+Casino Environment (Moving different layers based on speed - Anusheel)
+Icons Placement
+Ticket Counter Conversation (Unified - Anusheel)
+Buttons Interaction and Impact on screen
+
+Phase 2:
+Wanted Levels
