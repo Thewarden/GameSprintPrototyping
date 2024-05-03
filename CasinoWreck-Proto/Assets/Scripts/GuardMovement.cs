@@ -29,14 +29,14 @@ public class GuardMovement : MonoBehaviour
         if (currentPos == endPoint.transform)
         {
             rb.velocity = new Vector2(speed, 0);
-            spriteRendererLeft.enabled = true;
-            spriteRendererRight.enabled = false;
+            spriteRendererLeft.enabled = false;
+            spriteRendererRight.enabled = true;
         }
         else
         {
             rb.velocity = new Vector2(-speed, 0);
-            spriteRendererRight.enabled = true;
-            spriteRendererLeft.enabled = false;
+            spriteRendererRight.enabled = false;
+            spriteRendererLeft.enabled = true;
         }
 
         if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == endPoint.transform)
