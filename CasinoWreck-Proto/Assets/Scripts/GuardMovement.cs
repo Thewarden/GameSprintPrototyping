@@ -49,7 +49,7 @@ public class GuardMovement : MonoBehaviour
         {
             if (collision.GetComponent<Arcade>().isBreaking)
             {
-                Debug.Log("AAA");
+                Debug.Log("Guard has caught you");
             }
 
             else
