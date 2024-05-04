@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Arcade : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Arcade : MonoBehaviour
     public bool isBroken = false;       //Check to see if the arcade is broken
     public GameObject brokenMachine;    //Broken Machine when isBroken is true
     public GameObject machine;          //Normal machine
+    public string gameName;
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class Arcade : MonoBehaviour
         else if(!isBreaking && !isBroken && indicator.activeSelf && Input.GetKeyDown(KeyCode.E))        //If near the machine and E is pressed and currently not breaking and the arcade is not broken
         {
             isPlaying = true;
+            SceneManager.LoadScene(gameName);
         }
 
         if (isBroken)

@@ -43,7 +43,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity == Vector2.zero)
+        if (rb.position == rb.position)
         {
             Invoke("breaking", 3);
         }
@@ -105,6 +105,11 @@ public class PlayerScript : MonoBehaviour
             {
                 this.transform.position = new Vector2(0, this.transform.position.y);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            breaking = false;
         }
         
 

@@ -375,6 +375,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &82109045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82109047}
+  - component: {fileID: 82109046}
+  m_Layer: 5
+  m_Name: UIDocument
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &82109046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82109045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 1e5356565b872ae4a9f7d1dac0181b17, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: e014d1ae07450f94b918fb948fd3f578, type: 3}
+  m_SortingOrder: 0
+--- !u!4 &82109047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82109045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &108740242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2194,8 @@ GameObject:
   m_Component:
   - component: {fileID: 531543661}
   - component: {fileID: 531543662}
+  - component: {fileID: 531543664}
+  - component: {fileID: 531543663}
   m_Layer: 0
   m_Name: ticket_counter
   m_TagString: Untagged
@@ -2220,6 +2270,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &531543663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531543660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ddbf6e65def0f45a6feef2a7e59771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageMenu: {fileID: 82109045}
+  player: {fileID: 918425190}
+  Question: 
+  o1: 
+  o2: 
+  o3: 
+  CorrectOption: 3
+--- !u!58 &531543664
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531543660}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &539763116
 GameObject:
   m_ObjectHideFlags: 0
@@ -4372,6 +4457,7 @@ MonoBehaviour:
   isBroken: 0
   brokenMachine: {fileID: 450570458}
   machine: {fileID: 491282886}
+  gameName: Pachinko
 --- !u!4 &1292585038
 Transform:
   m_ObjectHideFlags: 0
@@ -5340,6 +5426,7 @@ MonoBehaviour:
   isBroken: 0
   brokenMachine: {fileID: 1810968463}
   machine: {fileID: 518420109}
+  gameName: 
 --- !u!4 &1527673942
 Transform:
   m_ObjectHideFlags: 0
@@ -5636,6 +5723,7 @@ MonoBehaviour:
   isBroken: 0
   brokenMachine: {fileID: 108740242}
   machine: {fileID: 1311592275}
+  gameName: 
 --- !u!4 &1627897181
 Transform:
   m_ObjectHideFlags: 0
@@ -5733,6 +5821,7 @@ MonoBehaviour:
   isBroken: 0
   brokenMachine: {fileID: 390422852}
   machine: {fileID: 1777911281}
+  gameName: Dropshot
 --- !u!4 &1666325001
 Transform:
   m_ObjectHideFlags: 0
@@ -6179,6 +6268,7 @@ MonoBehaviour:
   isBroken: 0
   brokenMachine: {fileID: 833352156}
   machine: {fileID: 304039799}
+  gameName: Slots
 --- !u!61 &1764229290
 BoxCollider2D:
   m_ObjectHideFlags: 0

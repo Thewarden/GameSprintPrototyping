@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class SlotsScript : MonoBehaviour
 {
@@ -76,5 +76,10 @@ public class SlotsScript : MonoBehaviour
     void hard()
     {
         Num = hardNum;
+    }
+
+    public void exit()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
