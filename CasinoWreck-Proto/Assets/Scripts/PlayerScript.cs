@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -21,10 +22,15 @@ public class PlayerScript : MonoBehaviour
     public KeyCode moveRightAlt = KeyCode.RightArrow;
     private int KeyMode = 1;
 
+    public CinemachineVirtualCamera playerCam;
+    private CinemachineFramingTransposer _CinemachineFramingTransposer;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _CinemachineFramingTransposer = playerCam.GetComponent<CinemachineFramingTransposer>();
+        
     }
 
     // Update is called once per frame
@@ -71,7 +77,7 @@ public class PlayerScript : MonoBehaviour
         if (this.transform.position.x <= 0) {
             this.transform.position = new Vector2(0, this.transform.position.y);
         }
-        cam.transform.position = new Vector3(transform.position.x, transform.position.y + _camOffset, cam.transform.position.z);
+        //cam.transform.position = new Vector3(transform.position.x, transform.position.y + _camOffset, cam.transform.position.z);
 
     }
 
@@ -86,5 +92,8 @@ public class PlayerScript : MonoBehaviour
     private void setDirection(Vector2 newDirection)
     {
         direction = newDirection;
+        playerCam.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset = new Vector3((direction.x * 7f), 2f, 0f);
+        playerCam.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth = 2 * Mathf.Abs(direction.x);
+
     }
 }
