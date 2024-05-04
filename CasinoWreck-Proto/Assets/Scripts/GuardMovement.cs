@@ -21,6 +21,7 @@ public class GuardMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentPos = endPoint.transform;
+        spriteRendererRight.enabled = true;
     }
 
     private void Update()
@@ -31,12 +32,14 @@ public class GuardMovement : MonoBehaviour
             rb.velocity = new Vector2(speed, 0);
             spriteRendererLeft.enabled = false;
             spriteRendererRight.enabled = true;
+            spriteRendererUp.enabled = false;
         }
         else
         {
             rb.velocity = new Vector2(-speed, 0);
             spriteRendererRight.enabled = false;
             spriteRendererLeft.enabled = true;
+            spriteRendererUp.enabled = false;
         }
 
         if (Vector2.Distance(transform.position, currentPos.position) < 0.5f && currentPos == endPoint.transform)

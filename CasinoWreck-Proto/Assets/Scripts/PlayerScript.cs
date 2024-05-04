@@ -68,8 +68,11 @@ public class PlayerScript : MonoBehaviour
             KeyMode = 1 - KeyMode;
         }
         
-
+        if (this.transform.position.x <= 0) {
+            this.transform.position = new Vector2(0, this.transform.position.y);
+        }
         cam.transform.position = new Vector3(transform.position.x, transform.position.y + _camOffset, cam.transform.position.z);
+
     }
 
     private void FixedUpdate()

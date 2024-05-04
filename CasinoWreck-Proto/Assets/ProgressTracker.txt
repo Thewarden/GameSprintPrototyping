@@ -1,9 +1,16 @@
-Player Movements
-Guard Movement and Detection
+Player Movements (W, S)
+Guard Detection (Modify collider later)
 Casino Environment (Moving different layers based on speed - Anusheel)
-Icons Placement
 Ticket Counter Conversation (Unified - Anusheel)
-Buttons Interaction and Impact on screen
 
 Phase 2:
+
+Mini Games:
+
+ - Slot (0 - 1, 0 - 4, 0 - 9) [Buttons Interaction and Impact on screen]
+ - Plinko (cost per coins dropping)
+ - 5 Symbol Wheel Roulette (Anusheel)
+ - My Own Creation (Anusheel )
+ - 
+
 Wanted Levels
