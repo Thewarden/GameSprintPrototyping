@@ -14,7 +14,7 @@ public class SlotsScript : MonoBehaviour
     char[] Num;
     public TMP_Text slotNum;
     public float time;
-    private int index;
+    
     void Start()
     {
         slotNum = GetComponent<TMP_Text>();
@@ -31,19 +31,19 @@ public class SlotsScript : MonoBehaviour
 
     public void setEasy()
     {
-        index = 0;
+        
         Invoke("easy", 4);
     }
 
     public void setMedium()
     {
-        index = 0;
+        
         Invoke("medium", 4);
     }
 
     public void setHard()
     {
-        index = 0;
+        
         Invoke("hard", 4);
     }
 

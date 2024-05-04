@@ -28,7 +28,7 @@ public class bgSpawn : MonoBehaviour
         _activeTilesRight = new List<GameObject>();
         playerTransform = _player.transform;
         this.transform.position = new Vector3(playerScript.cam.transform.position.x, playerScript.cam.transform.position.y, 0 + _bgZOffset);
-        _spawnX = this.transform.position.x;
+        _spawnX = this.transform.position.x - _tileLength;
     }
 
     void Start()
@@ -38,7 +38,7 @@ public class bgSpawn : MonoBehaviour
 
     void Update()
     {
-        if(playerTransform.position.x >= _spawnX - _tileLength)
+        if(playerTransform.position.x >= _spawnX - _tileLength * 2)
         {
             SpawnTile();
         }
