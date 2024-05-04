@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 227524669}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 304039800}
   - component: {fileID: 304039801}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 396404736}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ----- Arcades -----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491282887}
   - component: {fileID: 491282888}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 495157013}
   - component: {fileID: 495157012}
   - component: {fileID: 495157015}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ----- Base -----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 518420110}
   - component: {fileID: 518420111}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673925127}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ---------- FOREGROUND ----------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751788675}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ----- GuardAndPath -----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 918425193}
   - component: {fileID: 918425192}
   - component: {fileID: 918425194}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: ----- Hero -----
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 1004323106}
   - component: {fileID: 1004323105}
   - component: {fileID: 1004323104}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1056629214}
   - component: {fileID: 1056629213}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +1041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1071881797}
   - component: {fileID: 1071881796}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1125,7 +1125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1167611452}
   - component: {fileID: 1167611451}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 1207881863}
   - component: {fileID: 1207881864}
   - component: {fileID: 1207881865}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224997329}
   - component: {fileID: 1224997328}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1400,7 @@ GameObject:
   - component: {fileID: 1292585037}
   - component: {fileID: 1292585036}
   - component: {fileID: 1292585035}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: --- Arcade2 ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311592276}
   - component: {fileID: 1311592277}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1626,7 +1626,7 @@ GameObject:
   - component: {fileID: 1459331742}
   - component: {fileID: 1459331743}
   - component: {fileID: 1459331744}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1730,7 @@ GameObject:
   - component: {fileID: 1527673941}
   - component: {fileID: 1527673940}
   - component: {fileID: 1527673939}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: --- Arcade5 ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1821,7 +1821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597628502}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1855,7 @@ GameObject:
   - component: {fileID: 1627897180}
   - component: {fileID: 1627897179}
   - component: {fileID: 1627897178}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: '--- Arcade4 --- '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 1666325000}
   - component: {fileID: 1666324999}
   - component: {fileID: 1666324998}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: --- Arcade3 ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2041,7 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703519846}
   - component: {fileID: 1703519845}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2126,7 @@ GameObject:
   - component: {fileID: 1744385374}
   - component: {fileID: 1744385375}
   - component: {fileID: 1744385376}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2232,7 +2232,7 @@ GameObject:
   - component: {fileID: 1764229289}
   - component: {fileID: 1764229288}
   - component: {fileID: 1764229290}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: --- Arcade1 ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2324,7 +2324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777911282}
   - component: {fileID: 1777911283}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 1840535380}
   - component: {fileID: 1840535382}
   - component: {fileID: 1840535383}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: --- Guard ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2500,7 +2500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1974702446}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: --- Path ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998075378}
   - component: {fileID: 1998075379}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
