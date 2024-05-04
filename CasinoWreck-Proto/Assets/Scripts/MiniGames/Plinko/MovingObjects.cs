@@ -10,6 +10,7 @@ public class MovingObjects : MonoBehaviour
     public float speed = 5f;
     private GameObject[] objects;
     private float objectWidth;
+    
 
     public int direction = 1;
 
