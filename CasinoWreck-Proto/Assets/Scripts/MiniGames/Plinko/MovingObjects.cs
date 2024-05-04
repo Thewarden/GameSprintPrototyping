@@ -47,6 +47,6 @@ public class MovingObjects : MonoBehaviour
             }
         }
 
-        Debug.Log(objectWidth);
+        
     }
 }
