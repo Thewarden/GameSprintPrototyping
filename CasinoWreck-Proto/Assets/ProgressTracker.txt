@@ -1,14 +1,8 @@
-Player Movements (W, S)
-Guard Detection (Modify collider later)
 Ticket Counter Conversation
-
 Phase 2:
 
 Mini Games:
 
- - Plinko (cost per coins dropping)
  - 5 Symbol Wheel Roulette (Anusheel)
- - My Own Creation (Anusheel)
- - 
 
 Wanted Levels

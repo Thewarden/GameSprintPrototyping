@@ -12,8 +12,6 @@ public class PlayerScript : MonoBehaviour
 
     [Header("CameraFollow")]
     public GameObject cam;
-    [SerializeField]
-    private float _camOffset = 2f;
 
     [Header("Controls")]
     public KeyCode moveLeft = KeyCode.A;
@@ -77,7 +75,6 @@ public class PlayerScript : MonoBehaviour
         if (this.transform.position.x <= 0) {
             this.transform.position = new Vector2(0, this.transform.position.y);
         }
-        //cam.transform.position = new Vector3(transform.position.x, transform.position.y + _camOffset, cam.transform.position.z);
 
     }
 
