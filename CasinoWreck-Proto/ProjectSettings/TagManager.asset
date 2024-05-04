@@ -7,6 +7,7 @@ TagManager:
   - BgImage
   - ForkBase
   - ForkTarget
+  - Disk
   layers:
   - Default
   - TransparentFX

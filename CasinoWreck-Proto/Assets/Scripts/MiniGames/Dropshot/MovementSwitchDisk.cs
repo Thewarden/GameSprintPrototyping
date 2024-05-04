@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class MovementSwitchDisk : MonoBehaviour
 {
@@ -18,8 +20,8 @@ public class MovementSwitchDisk : MonoBehaviour
 
     private bool _hasFall;
     private UnifiedStorage _storage;
-    private int _hits;
-    private int _fallCount;
+    public int _hits;
+    public int _fallCount;
 
     void Start()
     {
@@ -88,18 +90,18 @@ public class MovementSwitchDisk : MonoBehaviour
         {
             _diskLightsArray[_diskLightsIndex].GetComponent<SpriteRenderer>().color = Color.yellow;
         }
+        
         if (_fallCount == 5)
         {
             _storage.TicketSet(_hits * _storage.TicketGet());
             _fallCount++;
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "ForkTarget")
+        if (Input.GetKeyDown(KeyCode.P)){
+            SceneManager.LoadScene(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            _hits += 1;
+        Debug.Log(_storage.TicketGet() + " " + _fallCount);
         }
     }
 
@@ -107,6 +109,5 @@ public class MovementSwitchDisk : MonoBehaviour
     {
         _diskLightsArray[_diskLightsIndex].GetComponent<SpriteRenderer>().color = Color.blue;
         _hasFall = false;
-        _fallCount++;
     }
 }

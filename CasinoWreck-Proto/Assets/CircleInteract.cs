@@ -17,21 +17,9 @@ public class CircleInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _ticketsSystem.TicketSet(5);
-        }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log(_ticketsSystem.TicketGet());
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            SceneManager.LoadScene(0);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            SceneManager.LoadScene(1);
         }
     }
 
