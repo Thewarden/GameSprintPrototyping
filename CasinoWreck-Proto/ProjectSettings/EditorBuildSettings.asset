@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 3a72635a57e7c754295fc287c3310f05
   - enabled: 1
+    path: Assets/Scenes/Slots.unity
+    guid: c3278938a185f254aa366328fa6c8d73
+  - enabled: 1
     path: Assets/Scenes/Pachinko.unity
     guid: e3101f06802675941b788e893a928d1d
+  - enabled: 1
+    path: Assets/Scenes/Dropshot.unity
+    guid: 21ade050879852f4d8509539ebf89c5a
+  - enabled: 1
+    path: Assets/Scenes/5SymbolWheel.unity
+    guid: d1343d350274324428f573e4c7123ba8
   m_configObjects: {}

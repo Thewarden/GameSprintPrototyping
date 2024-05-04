@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovementSwitchDisk : MonoBehaviour
@@ -16,9 +17,14 @@ public class MovementSwitchDisk : MonoBehaviour
     private float _rBound = 13f;
 
     private bool _hasFall;
+    private UnifiedStorage _storage;
+    private int _hits;
+    private int _fallCount;
 
     void Start()
     {
+        _hits = 0;
+        _storage = this.GetComponent<UnifiedStorage>();
         _hasFall = false;
         _diskIndex = 0;
         _diskLightsIndex = _diskIndex;
@@ -71,11 +77,36 @@ public class MovementSwitchDisk : MonoBehaviour
         {
             _diskArray[_diskIndex].transform.Translate(Vector2.right * Time.deltaTime * _speed);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             _diskArray[_diskIndex].GetComponent<Rigidbody2D>().gravityScale = 1;
             _diskArray[_diskIndex].GetComponent<BoxCollider2D>().enabled = true;
             _hasFall = true;
+            Invoke("SetFallFalse", 3f);
         }
+        if (_hasFall == true)
+        {
+            _diskLightsArray[_diskLightsIndex].GetComponent<SpriteRenderer>().color = Color.yellow;
+        }
+        if (_fallCount == 5)
+        {
+            _storage.TicketSet(_hits * _storage.TicketGet());
+            _fallCount++;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "ForkTarget")
+        {
+            _hits += 1;
+        }
+    }
+
+    public void SetFallFalse()
+    {
+        _diskLightsArray[_diskLightsIndex].GetComponent<SpriteRenderer>().color = Color.blue;
+        _hasFall = false;
+        _fallCount++;
     }
 }
