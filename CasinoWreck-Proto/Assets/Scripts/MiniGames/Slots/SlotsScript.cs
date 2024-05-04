@@ -32,19 +32,19 @@ public class SlotsScript : MonoBehaviour
     public void setEasy()
     {
         index = 0;
-        Num = easyNum;
+        Invoke("easy", 4);
     }
 
     public void setMedium()
     {
         index = 0;
-        Num = medNum;
+        Invoke("medium", 4);
     }
 
     public void setHard()
     {
         index = 0;
-        Num= hardNum;
+        Invoke("hard", 4);
     }
 
     public void On()
@@ -61,5 +61,20 @@ public class SlotsScript : MonoBehaviour
     public void DelayNum()
     {
         enabled = false;
+    }
+
+    void easy()
+    {
+        Num = easyNum;
+    }
+
+    void medium()
+    {
+        Num = medNum;
+    }
+
+    void hard()
+    {
+        Num = hardNum;
     }
 }
