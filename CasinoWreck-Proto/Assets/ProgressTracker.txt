@@ -1,6 +1,6 @@
 Player Movements (W, S)
 Guard Detection (Modify collider later)
-Ticket Counter Conversation (Unified - Anusheel)
+Ticket Counter Conversation
 
 Phase 2:
 
