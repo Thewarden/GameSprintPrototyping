@@ -1825,6 +1825,7 @@ GameObject:
   - component: {fileID: 469320500}
   - component: {fileID: 469320499}
   - component: {fileID: 469320502}
+  - component: {fileID: 469320503}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1932,6 +1933,102 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!82 &469320503
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469320498}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 82f18ccadf34da744b95d3d7e3b928db, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &491282886
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4487,7 @@ GameObject:
   - component: {fileID: 1292585037}
   - component: {fileID: 1292585036}
   - component: {fileID: 1292585035}
+  - component: {fileID: 1292585039}
   m_Layer: 0
   m_Name: --- Arcade2 ---
   m_TagString: Untagged
@@ -4451,13 +4549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee3f57a47fed1c47a4d6418fc0e7b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicator: {fileID: 1056629212}
-  isBreaking: 0
-  isPlaying: 0
-  isBroken: 0
-  brokenMachine: {fileID: 450570458}
-  machine: {fileID: 491282886}
-  gameName: Pachinko
 --- !u!4 &1292585038
 Transform:
   m_ObjectHideFlags: 0
@@ -4476,6 +4567,25 @@ Transform:
   m_Father: {fileID: 396404736}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292585039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292585034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801365a0bb9c04f4f93e41baa5f5955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 1056629212}
+  isBreaking: 0
+  isPlaying: 0
+  isBroken: 0
+  brokenMachine: {fileID: 450570458}
+  machine: {fileID: 491282886}
+  gameName: Pachinko
 --- !u!1 &1298105410
 GameObject:
   m_ObjectHideFlags: 0
@@ -5359,6 +5469,7 @@ GameObject:
   - component: {fileID: 1527673941}
   - component: {fileID: 1527673940}
   - component: {fileID: 1527673939}
+  - component: {fileID: 1527673943}
   m_Layer: 0
   m_Name: --- Arcade5 ---
   m_TagString: Untagged
@@ -5420,13 +5531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee3f57a47fed1c47a4d6418fc0e7b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicator: {fileID: 1167611450}
-  isBreaking: 0
-  isPlaying: 0
-  isBroken: 0
-  brokenMachine: {fileID: 1810968463}
-  machine: {fileID: 518420109}
-  gameName: 
 --- !u!4 &1527673942
 Transform:
   m_ObjectHideFlags: 0
@@ -5445,6 +5549,25 @@ Transform:
   m_Father: {fileID: 396404736}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527673943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527673938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801365a0bb9c04f4f93e41baa5f5955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 1167611450}
+  isBreaking: 0
+  isPlaying: 0
+  isBroken: 0
+  brokenMachine: {fileID: 1810968463}
+  machine: {fileID: 518420109}
+  gameName: 
 --- !u!1 &1554487614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,6 +5779,7 @@ GameObject:
   - component: {fileID: 1627897180}
   - component: {fileID: 1627897179}
   - component: {fileID: 1627897178}
+  - component: {fileID: 1627897182}
   m_Layer: 0
   m_Name: '--- Arcade4 --- '
   m_TagString: Untagged
@@ -5717,13 +5841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee3f57a47fed1c47a4d6418fc0e7b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicator: {fileID: 1224997327}
-  isBreaking: 0
-  isPlaying: 0
-  isBroken: 0
-  brokenMachine: {fileID: 108740242}
-  machine: {fileID: 1311592275}
-  gameName: 
 --- !u!4 &1627897181
 Transform:
   m_ObjectHideFlags: 0
@@ -5742,6 +5859,25 @@ Transform:
   m_Father: {fileID: 396404736}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627897182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627897177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801365a0bb9c04f4f93e41baa5f5955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 1224997327}
+  isBreaking: 0
+  isPlaying: 0
+  isBroken: 0
+  brokenMachine: {fileID: 108740242}
+  machine: {fileID: 1311592275}
+  gameName: 
 --- !u!1 &1666324997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5754,6 +5890,7 @@ GameObject:
   - component: {fileID: 1666325000}
   - component: {fileID: 1666324999}
   - component: {fileID: 1666324998}
+  - component: {fileID: 1666325002}
   m_Layer: 0
   m_Name: --- Arcade3 ---
   m_TagString: Untagged
@@ -5815,13 +5952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee3f57a47fed1c47a4d6418fc0e7b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicator: {fileID: 1071881795}
-  isBreaking: 0
-  isPlaying: 0
-  isBroken: 0
-  brokenMachine: {fileID: 390422852}
-  machine: {fileID: 1777911281}
-  gameName: Dropshot
 --- !u!4 &1666325001
 Transform:
   m_ObjectHideFlags: 0
@@ -5840,6 +5970,25 @@ Transform:
   m_Father: {fileID: 396404736}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666325002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666324997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801365a0bb9c04f4f93e41baa5f5955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 1071881795}
+  isBreaking: 0
+  isPlaying: 0
+  isBroken: 0
+  brokenMachine: {fileID: 390422852}
+  machine: {fileID: 1777911281}
+  gameName: Dropshot
 --- !u!1 &1670980123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6209,6 +6358,7 @@ GameObject:
   - component: {fileID: 1764229289}
   - component: {fileID: 1764229288}
   - component: {fileID: 1764229290}
+  - component: {fileID: 1764229291}
   m_Layer: 0
   m_Name: --- Arcade1 ---
   m_TagString: Untagged
@@ -6262,13 +6412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee3f57a47fed1c47a4d6418fc0e7b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicator: {fileID: 1703519844}
-  isBreaking: 0
-  isPlaying: 0
-  isBroken: 0
-  brokenMachine: {fileID: 833352156}
-  machine: {fileID: 304039799}
-  gameName: Slots
 --- !u!61 &1764229290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6295,6 +6438,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1764229291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764229286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801365a0bb9c04f4f93e41baa5f5955a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 1703519844}
+  isBreaking: 0
+  isPlaying: 0
+  isBroken: 0
+  brokenMachine: {fileID: 833352156}
+  machine: {fileID: 304039799}
+  gameName: Slots
 --- !u!1 &1768026700
 GameObject:
   m_ObjectHideFlags: 0
