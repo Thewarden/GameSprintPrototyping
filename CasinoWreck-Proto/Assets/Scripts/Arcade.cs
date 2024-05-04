@@ -8,6 +8,8 @@ public class Arcade : MonoBehaviour
     public bool isBreaking = false;     //Check to see if the the arcade is being broken
     public bool isPlaying = false;      //Check to see if the arcade is being played
     public bool isBroken = false;       //Check to see if the arcade is broken
+    public GameObject brokenMachine;    //Broken Machine when isBroken is true
+    public GameObject machine;          //Normal machine
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,7 @@ public class Arcade : MonoBehaviour
         {
             Debug.Log("Breaking");
             isBreaking = true;
-            Invoke("Breaking", 5);
+            Invoke("Breaking", 3);
         }
 
         else if(!isBreaking && !isBroken && indicator.activeSelf && Input.GetKeyDown(KeyCode.E))        //If near the machine and E is pressed and currently not breaking and the arcade is not broken
@@ -30,8 +32,20 @@ public class Arcade : MonoBehaviour
             isPlaying = true;
         }
 
+        if (isBroken)
+        {
+            
+            brokenMachine.SetActive(true);
+            machine.SetActive(false);
+            indicator.SetActive(false);
+            
+        }
+
         //Debug.Log(isBreaking);
     }
+
+
+
 
     public void Breaking()
     {
@@ -41,11 +55,26 @@ public class Arcade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !isBroken)
         {
             indicator.SetActive(true);
             
+            
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (isBreaking && collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.transform.position = transform.position;
+            collision.gameObject.GetComponent<PlayerScript>().breaking = true;
+        }
+        if (isBroken && collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerScript>().breaking = false;
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -53,6 +82,7 @@ public class Arcade : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             indicator.SetActive(false);
+            other.gameObject.GetComponent<PlayerScript>().breaking = false;
         }
     }
 }
